@@ -189,9 +189,11 @@
 
     function editTask(index) {
       let newName = prompt("Enter the name");
-      tasks[index].name = newName;
-      updatLocalStorage()
-      fillTasks();
+      if(newName != null){
+        tasks[index].name = newName;
+        updatLocalStorage()
+        fillTasks();
+      }
     }
 
     function completTask(index) {
